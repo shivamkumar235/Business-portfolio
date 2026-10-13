@@ -72,4 +72,11 @@ export const projects = [
     image: "adminartist.png",
     url: "https://artist-website-frontend.vercel.app/admin/login",
   },
+  {
+    id: 5,
+    title: "Content Creator Planner",
+    type: "Website",
+    image: "C-C-P.png",
+    url: "https://content-planner-seven-gilt.vercel.app/",
+  },
 ];
