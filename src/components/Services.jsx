@@ -10,7 +10,7 @@ function Services() {
           {services.map((item) => (
             <div
               key={item.id}
-              className="bg-white border border-amber-200 rounded-2xl p-5"
+              className="bg-white border border-amber-200 hover:scale-105 hover:border-green-500 rounded-2xl p-5"
             >
               <div className="text-3xl">{item.icon}</div>
               <h3 className="text-lg font-semibold mt-2">{item.title}</h3>

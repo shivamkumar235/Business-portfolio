@@ -8,7 +8,7 @@ function ProjectCard(props) {
   const imageSrc = allImages["../assets/" + props.image];
 
   return (
-    <div className="bg-white border border-amber-200 rounded-2xl p-5">
+    <div className="bg-white border  border-amber-300 hover:scale-105 hover:border-green-500 rounded-2xl p-5">
       {/* <div className="h-24 rounded-xl bg-amber-100 flex items-center justify-center text-4xl"> */}
       {/* <img
         className="h-24 rounded-xl flex items-center justify-center"
@@ -29,7 +29,7 @@ function ProjectCard(props) {
         rel="noopener noreferrer"
         className="inline-block mt-2 text-orange-600 font-semibold"
       >
-        View →
+        Website →
       </a>
     </div>
   );

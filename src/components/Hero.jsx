@@ -57,20 +57,31 @@ function Hero() {
       {/* <div className="bg-green-500 absolute left-190 top-10 rounded-[50%] blur-2xl h-100 w-100">
         ; hai
       </div> */}
-
       <motion.div
-        className="box bg-green-500 fixed left-60 sm:left-100 md:left-200 top-10 rounded-[50%] blur-3xl h-40 w-40 sm:h-56 sm:w-56 md:h-80 md:w-80  z-1"
-        // Animate when this value changes:
-        animate={{ scale: 2 }}
-        // Fade in when the element enters the viewport:
-        // whileInView={{ opacity: 1 }}
-        initial={{ backgroundColor: "rgb(0, 255, 0)", opacity: 0 }}
-        whileInView={{ backgroundColor: "rgb(0, 255, 0)", opacity: 1 }} // Animate the component when its layout changes:
-        layout
-        // Style now supports indepedent transforms:
+        className="box bg-green-500 fixed left-60 sm:left-100 md:left-200 top-10 rounded-[50%] blur-3xl h-40 w-40 sm:h-56 sm:w-56 md:h-80 md:w-80 z-1"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          scale: 2,
+          backgroundColor: [
+            "rgb(0, 255, 0)",
+            "rgb(0, 255, 0)",
+            "rgb(255, 0, 0)",
+            "rgb(255, 0, 0)",
+          ],
+        }}
+        transition={{
+          opacity: { duration: 1 },
+          scale: { duration: 1 },
+          backgroundColor: {
+            duration: 2,
+            times: [0, 0.49, 0.5, 1],
+            repeat: Infinity,
+            ease: "linear",
+          },
+        }}
         style={{ x: 100 }}
       />
-
       {/* <motion.div
         className="fixed -z-10 pointer-events-none rounded-full bg-green-500 blur-3xl
              top-10 right-0
